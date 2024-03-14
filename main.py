@@ -69,17 +69,19 @@ def get_user_cookies(driver):
         # Clear log.txt
         pass
     
+    with open('url.txt', 'r') as file:
+        lines = file.readlines()
+        
+    url = lines[0].strip()
+    
     with open('log.txt', 'w') as log_file:
         while True:
             # Print the ongoing downloading page...
             print(f'Downloading page {page_id}')
-            url = f'https://elearning.visionbook.com.tw/protect/ebook/english/112EQ401E/112EQ401E/files/page/{page_id}.jpg'
-            # url = f'https://elearning.visionbook.com.tw/protect/ebook/english/00VEQ410E/VEQ410E/files/page/{page_id}.jpg'
-
+            formatted_url = url.format(page_id=page_id)
             # Opne the website
             try:
-                # driver.get(f'https://elearning.visionbook.com.tw/protect/ebook/english/112EQ401E/112EQ401E/files/page/{page_id}.jpg')
-                driver.get(url)
+                driver.get(formatted_url)
             
             except Exception as e:
                 log_file.write(f'Cannot get{page_id}, may because is the final page')
@@ -93,7 +95,7 @@ def get_user_cookies(driver):
                 session.cookies.set(cookie['name'], cookie['value'])
 
             # Download picture
-            response = session.get(url)
+            response = session.get(formatted_url)
             
             try:
                 # Save the jpg into the pdf file folder

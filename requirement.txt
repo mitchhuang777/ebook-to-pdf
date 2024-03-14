@@ -1,0 +1,5 @@
+selenium==4.18.1
+PyPDF2==3.0.1
+tqdm==4.66.2
+Pillow==10.2.0
+coverage==7.4.3

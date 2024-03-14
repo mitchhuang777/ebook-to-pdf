@@ -15,13 +15,29 @@
 - 安裝所需套件 `pip install -r requirement.txt` 或是 `pip3 install -r requirement.txt`
 - 接著下載對應你Google 瀏覽的ChromeDriver，[下載網址](https://googlechromelabs.github.io/chrome-for-testing/) (查詢Google瀏覽器版本請看底下方式)
 - 打開`account.txt`，把`YOURACCOUNT`和`YOURPASSWORD`替換成晟景的帳號和密碼(帳號就是你在網頁登入時的帳號)
+- 打開`url.txt`，替換成你要下載的網址(查詢電子書url請看底下方式)
 - 執行main.py `python main.py` `python3 main.py`
+- 最後會生成`result.pdf`，就是下載好的電子書了
 
 ## 查詢Google瀏覽器版本
 1. 打開Google瀏覽器
 2. 在瀏覽器的搜尋欄位中輸入`chrome://settings/` 並按下Enter鍵
 3. 左下角點選`關於 Chrome`
 4. 就會看到版本是`1xx.x.xxxx.xxx`
+
+## 查詢電子書url
+1. 登入後，點選`我的書籍`，或是登入後在瀏覽器輸入`https://elearning.visionbook.com.tw/member/ebook`
+![image](https://github.com/mitchhuang777/ebook-to-pdf/assets/79703512/d9995b93-4446-426f-9a2a-9ddad5e8e1b1)
+
+2. 點選你要下載的電子書，複製電子書網址
+
+![image](https://github.com/mitchhuang777/ebook-to-pdf/assets/79703512/cbf80840-a163-4343-aaf5-42efb392a23d)
+
+3. 接著在網址後面加上/files/page/1.jpg，如果有類似跳轉到png檔案的頁面就代表網址沒錯
+![image](https://github.com/mitchhuang777/ebook-to-pdf/assets/79703512/47a51612-e0a4-4a66-b1f2-679ccb193565)
+
+4. 接著把打開`url.txt`，把`1`的地方改成`{page_id}`，url的格式會長這樣子，`https://elearning.visionbook.com.tw/protect/ebook/english/00VEQ410E/VEQ410E/files/page/{page_id}.jpg`
+5. 儲存檔案即可
 
 ## Unittest覆蓋率
 

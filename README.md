@@ -36,7 +36,7 @@
 
 ![image](https://github.com/mitchhuang777/ebook-to-pdf/assets/79703512/cbf80840-a163-4343-aaf5-42efb392a23d)
 
-3. 接著在網址後面加上/files/page/1.jpg，如果有類似跳轉到png檔案的頁面就代表網址沒錯
+3. 接著在網址後面加上`/files/page/1.jpg`，如果有類似跳轉到png檔案的頁面就代表網址沒錯
 ![image](https://github.com/mitchhuang777/ebook-to-pdf/assets/79703512/47a51612-e0a4-4a66-b1f2-679ccb193565)
 
 4. 接著把打開`url.txt`，把`1`的地方改成`{page_id}`，url的格式會長這樣子，`https://elearning.visionbook.com.tw/protect/ebook/english/00VEQ410E/VEQ410E/files/page/{page_id}.jpg`

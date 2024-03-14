@@ -97,6 +97,12 @@ def get_user_cookies(driver):
             # Download picture
             response = session.get(formatted_url)
             
+            pdf_directory = 'pdf'
+            
+            # If pdf/ directory not exists, create it!
+            if not os.path.exists(pdf_directory):
+                os.makedirs(pdf_directory)
+            
             try:
                 # Save the jpg into the pdf file folder
                 with open(f'pdf/{page_id}.jpg', 'wb') as image_file:
